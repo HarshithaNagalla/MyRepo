@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Download Lead Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <h1 style="color: blue; text-align: center;font-family: FontAwesome">Download Lead Data</h1>
+        <form action="{% url 'resize:download' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            <button type="submit" class="btn btn-success">Download<span class="glyphicon glyphicon-download"></span></button>
+        </form>
+
+</div>
+</body>
+</html>
+
