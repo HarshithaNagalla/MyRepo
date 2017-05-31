@@ -1,0 +1,13 @@
+from django.shortcuts import render
+
+# Helper Functions
+def upload_file(file, dir):
+        upload_file_path = settings.MEDIA_ROOT + '/' + dir + '/' + file.name
+        with open(upload_file_path, 'w') as upload:
+                for chunk in file.chunks():
+                        upload.write(chunk)
+
+        return upload_file_path
+
+# Create your views here.
+

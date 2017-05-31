@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<form action="{% url 'uploadApp:upload' %}" enctype="multipart/form-data" method="post">
+{{ form.file_name }}
+{% csrf_token %}
+<!--<p>
+Please specify a file, or a set of files:<br>
+<input type="file" name="datafile" size="40">-->
+<div class = "form-group">
+{{ form.as_p}}
+</div>
+<div>
+<input type="submit" value="Send">
+</div>
+</form>
+</body>
+</html>
